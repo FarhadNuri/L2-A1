@@ -7,8 +7,6 @@ function filterEvenNumbers(numbers: number[]): number[] {
     }
     return nums;
 }   
-filterEvenNumbers([1, 2, 3, 4, 5, 6]);
-
 
 function reverseString(str: string): string {
     let rev: string = '';
@@ -17,10 +15,8 @@ function reverseString(str: string): string {
     }   
     return rev;
 }
-reverseString("hello");
 
 type StringOrNumber = string | number;
-
 function checkType(value: StringOrNumber): string {
     if (typeof value === "string") {
         return "String";
@@ -28,16 +24,11 @@ function checkType(value: StringOrNumber): string {
         return "Number";
     }
 }
-checkType("hello");
-
 
 type genericObject<T> = { [key: string]: T; }
-const user = { id: 1, name: "John Doe", age: 21 };
 function getProperty(obj: genericObject<any>, key: string): object {
     return obj[key];
 }
-
-getProperty(user, "name");
 
 interface Book {
     title: string;
@@ -51,15 +42,6 @@ function toggleReadStatus<T extends Book>(book: T): T & { isRead: boolean } {
         isRead: true
     };
 }
-
-const newBook = {
-    title: "TypeScript Guide",
-    author: "Jane Doe",
-    publishedYear: 2024
-};
-
-toggleReadStatus(newBook);
-
 
 class Person {
     name: string;
@@ -80,9 +62,6 @@ class Student extends Person {
         return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
     }
 }
-const student = new Student("Farhad Nuri", 23, "A");
-student.getDetails();
-
 
 function getIntersection(arr1: number[], arr2: number[]): number[] {
     const result: number[] = [];
@@ -93,7 +72,3 @@ function getIntersection(arr1: number[], arr2: number[]): number[] {
     }
     return result;
 }
-getIntersection(
-    [144, 211, 344, 301, 555],
-    [301, 24, 211, 654, 722]
-);
