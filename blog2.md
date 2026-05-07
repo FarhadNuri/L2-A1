@@ -16,6 +16,8 @@ class Dog extends Animal {}
 const d = new Dog();
 d.sound();
 ```
+This reduces duplicate code and keeps projects organized.
+
 ## Polymorphism
 
 Polymorphism allows the same method to behave differently for different objects. This makes code flexible and scalable.
