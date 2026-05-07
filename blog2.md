@@ -54,7 +54,7 @@ The user only knows payment happens, not the internal process.
 
 Encapsulation protects data from direct access. Data is controlled using methods which improves security and stability.
 
-````
+```
 class Account {
     private balance = 1000;
 
